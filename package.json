@@ -1,0 +1,36 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "- It is a Rent a car website where Customers can book the cars by paying through Stripe. \r - Admin can see the bookings and can manage the cars. \r - If a car is booked for a time span no other customer can book the same car on same time span.",
+  "main": "index.js",
+  "engines": {
+    "node": "16.17.0",
+    "npm": "8.15.0"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "node server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently\"npm run server\"\"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  
+  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NumanAnees/CRP/issues"
+  },
+  "homepage": "https://github.com/NumanAnees/CRP#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "heroku": "^7.65.0",
+    "mongoose": "^6.6.1",
+    "nodemon": "^2.0.20",
+    "stripe": "^8.194.0",
+    "uuid": "^8.3.2"
+  }
+}
